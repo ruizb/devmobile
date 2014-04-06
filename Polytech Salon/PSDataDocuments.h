@@ -11,7 +11,7 @@
 #import "PSDocument.h"
 #import "PSType.h"
 #import "PSSetOfAreas.h"
-#import "CFObserver.h"
+#import "Observer.h"
 
 @interface PSDataDocuments : NSObject<CFObserver>
 

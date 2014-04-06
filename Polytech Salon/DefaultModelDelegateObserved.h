@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CFDefaultModelObserved.h"
+#import "DefaultModelObserved.h"
 
 @interface CFDefaultModelDelegateObserved : NSObject <CFModelObserved>
 

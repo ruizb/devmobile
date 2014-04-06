@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Fiorio Christophe. All rights reserved.
 //
 
-#import "CFDefaultModelDelegateObserved.h"
+#import "DefaultModelDelegateObserved.h"
 
 @implementation CFDefaultModelDelegateObserved
 

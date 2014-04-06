@@ -131,6 +131,23 @@
         _docs = [NSMutableSet setWithArray:tabDocs];
         _types = [[PSSetOfTypes alloc]initWithArray:tabTypes];
         _pools = [NSMutableSet setWithCapacity:20];
+        
+        for (int i=0; i<[(dataDictionnary[@"pools"]) count]; i++) {
+            PSPool* monPool = [[PSPool alloc] initWithName:dataDictionnary[@"pools"][i][@"name"]];
+            for (int j=0; j<[(dataDictionnary[@"pools"][i]) count]; j++) {
+              int k = 0;
+              PSDocument* tmp2 = tabDocs[k];
+              while ((![(dataDictionnary[@"pools"][i][@"docs"][j]) isEqualToString:tmp2.name]) && (k<[tabDocs count])) {
+                  NSLog(tmp2.name);
+                  k++;
+                  tmp2 = tabDocs[k];
+              }
+              if (k<[tabDocs count]) {
+                  [monPool addDoc:tmp2];
+              }
+            }
+            [self addPool:monPool];
+        }
     }
     return self;
 }

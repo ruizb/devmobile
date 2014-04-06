@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "PSObjectWithName.h"
-#import "CFModelObserved.h"
-#import "CFDefaultModelObserved.h"
+#import "ModelObserved.h"
+#import "DefaultModelObserved.h"
 
 // set of objects with a name property
 // set is indexed and objects can be retrieved by their name

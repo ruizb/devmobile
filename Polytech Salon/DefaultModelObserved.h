@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CFModelObserved.h"
+#import "ModelObserved.h"
 
 @interface CFDefaultModelObserved : NSObject <CFModelObserved>
 @property (nonatomic,strong) NSMutableSet* observerSet;

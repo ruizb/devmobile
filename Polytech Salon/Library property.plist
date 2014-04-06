@@ -2,6 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>pools</key>
+	<array>
+		<dict>
+			<key>docs</key>
+			<array>
+				<string>Syllabus ERII</string>
+				<string>Syllabus IG</string>
+			</array>
+			<key>name</key>
+			<string>Pool2</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Pool1</string>
+			<key>docs</key>
+			<array>
+				<string>Plaquette IG</string>
+				<string>Plaquette SE</string>
+			</array>
+		</dict>
+	</array>
 	<key>types</key>
 	<array>
 		<string>URL</string>
@@ -23,6 +44,14 @@
 	</array>
 	<key>documents</key>
 	<array>
+		<dict>
+			<key>name</key>
+			<string>Plaquette SE</string>
+			<key>area</key>
+			<string>SE</string>
+			<key>type</key>
+			<string>Jpeg</string>
+		</dict>
 		<dict>
 			<key>name</key>
 			<string>Plaquette IG</string>

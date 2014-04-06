@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CFObserver.h"
+#import "Observer.h"
 
 @protocol CFModelObserved <NSObject>
 - (void)addObserver:(id<CFObserver>) observer;
