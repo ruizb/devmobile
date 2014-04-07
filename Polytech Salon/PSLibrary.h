@@ -13,6 +13,7 @@
 #import "PSPool.h"
 #import "PSSetOfAreas.h"
 #import "PSSetOfTypes.h"
+#import "PSSetOfPools.h"
 #import "NSMutableSet+PSSet.h"
 
 @interface PSLibrary : NSObject
@@ -20,20 +21,12 @@
 @property (nonatomic,readonly,strong) PSSetOfTypes* types;
 @property (nonatomic,readonly,strong) PSSetOfAreas* areas;
 @property (nonatomic,readonly,strong) NSMutableSet* docs;
-@property (nonatomic,readonly,strong) NSMutableSet* pools;
+@property (nonatomic,readonly,strong) PSSetOfPools* pools;
 
 // *************************************************************************************
 
-// base initializer with defaults documents, areas and types
-// define for test purpose, in a final relaease should call the property initializer
-- (id) init;
 // initializer from property file. Should be the one used;
 - (id) initWithPropertyList;
-
-// *************************************************************************************
-
-// add a pool to this library
-- (void) addPool:(PSPool*)pool;
 
 // *************************************************************************************
 // methods managing property files

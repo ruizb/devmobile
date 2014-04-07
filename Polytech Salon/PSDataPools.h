@@ -20,7 +20,7 @@
 -(id) initWithPools:(PSSetOfPools*)aSetOfPools;
 
 -(PSPool*) getPoolForSection:(NSInteger)aSection;
--(NSMutableSet*) getDocumentsListForSection:(NSInteger)aSection;
+-(NSArray*) getDocumentsListForSection:(NSInteger)aSection;
 
 -(NSString*) getPoolNameForSection:(NSInteger)aSection;
 

@@ -8,16 +8,27 @@
 			<key>docs</key>
 			<array>
 				<string>Syllabus ERII</string>
+				<string>Plaquette ERII</string>
+			</array>
+			<key>name</key>
+			<string>Dossier inscription ERII</string>
+		</dict>
+		<dict>
+			<key>docs</key>
+			<array>
+				<string>Plaquette IG</string>
 				<string>Syllabus IG</string>
 			</array>
 			<key>name</key>
-			<string>Pool2</string>
+			<string>Etudiant IG</string>
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Pool1</string>
+			<string>Présentation Polytech</string>
 			<key>docs</key>
 			<array>
+				<string>Plaquette ERII</string>
+				<string>Plaquette M&amp;I</string>
 				<string>Plaquette IG</string>
 				<string>Plaquette SE</string>
 			</array>

@@ -50,6 +50,8 @@
 		07B5554C18D46C3600EBA151 /* Library property.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B5554A18D46C3600EBA151 /* Library property.plist */; };
 		849F07CA18F31ABD00BE3F18 /* PSDataPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07C918F31ABD00BE3F18 /* PSDataPools.m */; };
 		849F07CD18F31E9500BE3F18 /* PSSetOfPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07CC18F31E9500BE3F18 /* PSSetOfPools.m */; };
+		849F07D018F328BC00BE3F18 /* PSPoolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */; };
+		849F07D318F329E200BE3F18 /* PSPoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07D218F329E200BE3F18 /* PSPoolCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +121,10 @@
 		849F07C918F31ABD00BE3F18 /* PSDataPools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDataPools.m; sourceTree = "<group>"; };
 		849F07CB18F31E9500BE3F18 /* PSSetOfPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSetOfPools.h; sourceTree = "<group>"; };
 		849F07CC18F31E9500BE3F18 /* PSSetOfPools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSetOfPools.m; sourceTree = "<group>"; };
+		849F07CE18F328BC00BE3F18 /* PSPoolTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPoolTableViewController.h; sourceTree = "<group>"; };
+		849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPoolTableViewController.m; sourceTree = "<group>"; };
+		849F07D118F329E200BE3F18 /* PSPoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPoolCell.h; sourceTree = "<group>"; };
+		849F07D218F329E200BE3F18 /* PSPoolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPoolCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +162,10 @@
 				0760E1E018CDF0E5006133F3 /* PSDocsTableViewController.m */,
 				0760E1E218CDF1A4006133F3 /* PSDocCell.h */,
 				0760E1E318CDF1A4006133F3 /* PSDocCell.m */,
+				849F07CE18F328BC00BE3F18 /* PSPoolTableViewController.h */,
+				849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */,
+				849F07D118F329E200BE3F18 /* PSPoolCell.h */,
+				849F07D218F329E200BE3F18 /* PSPoolCell.m */,
 				0731D42918CCA32300373AE1 /* Polytech Salon */,
 				0731D44218CCA32300373AE1 /* Polytech SalonTests */,
 				0731D42218CCA32300373AE1 /* Frameworks */,
@@ -394,11 +404,13 @@
 				0760E1E418CDF1A4006133F3 /* PSDocCell.m in Sources */,
 				0760E27618D04A1B006133F3 /* PSSetOfAreas.m in Sources */,
 				849F07CA18F31ABD00BE3F18 /* PSDataPools.m in Sources */,
+				849F07D318F329E200BE3F18 /* PSPoolCell.m in Sources */,
 				0731D46918CD032A00373AE1 /* PSLibrary.m in Sources */,
 				07B5554818D369D900EBA151 /* PSDataDocuments.m in Sources */,
 				0760E27218D04144006133F3 /* PSSetOfTypes.m in Sources */,
 				0760E27E18D1EF42006133F3 /* NSMutableSet+PSSet.m in Sources */,
 				0731D46118CCFCEF00373AE1 /* PSArea.m in Sources */,
+				849F07D018F328BC00BE3F18 /* PSPoolTableViewController.m in Sources */,
 				0731D43418CCA32300373AE1 /* PSAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

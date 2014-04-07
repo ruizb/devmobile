@@ -18,6 +18,6 @@
 
 - (void) addDoc:(PSDocument*)doc;
 - (void) delDoc:(PSDocument*)doc;
-- (NSMutableSet*) getDocsList;
+- (NSArray*) getDocsList;
 
 @end

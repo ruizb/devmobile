@@ -112,16 +112,19 @@
     self = [super init];
     if(self){
         NSDictionary* dataDictionnary = [self readPropertyFile];
+        
         NSMutableArray* tabAreas = [NSMutableArray arrayWithCapacity:[(dataDictionnary[@"areas"]) count]];
         for (int i=0; i<[(dataDictionnary[@"areas"]) count]; i++) {
             tabAreas[i] = [[PSArea alloc] initWithName:dataDictionnary[@"areas"][i]];
         }
         _areas = [[PSSetOfAreas alloc]initWithArray:tabAreas];
+        
         NSMutableArray* tabTypes = [NSMutableArray arrayWithCapacity:[(dataDictionnary[@"types"]) count]];
         for (int i=0; i<[(dataDictionnary[@"types"]) count]; i++) {
             tabTypes[i] = [[PSArea alloc] initWithName:dataDictionnary[@"types"][i]];
         }
         _types = [[PSSetOfTypes alloc]initWithArray:tabTypes];
+        
         NSMutableArray* tabDocs = [NSMutableArray arrayWithCapacity:[(dataDictionnary[@"documents"]) count]];
         for (int i=0; i<[(dataDictionnary[@"documents"]) count]; i++) {
             tabDocs[i] = [[PSDocument alloc] initWithName:(dataDictionnary[@"documents"][i])[@"name"]
@@ -129,66 +132,26 @@
                                                   andArea:[_areas areaOfName:(dataDictionnary[@"documents"][i])[@"area"]]];
         }
         _docs = [NSMutableSet setWithArray:tabDocs];
-        _types = [[PSSetOfTypes alloc]initWithArray:tabTypes];
-        _pools = [NSMutableSet setWithCapacity:20];
         
+        NSMutableArray* tabPools = [NSMutableArray arrayWithCapacity:[(dataDictionnary[@"pools"]) count]];
         for (int i=0; i<[(dataDictionnary[@"pools"]) count]; i++) {
-            PSPool* monPool = [[PSPool alloc] initWithName:dataDictionnary[@"pools"][i][@"name"]];
+            tabPools[i] = [[PSPool alloc] initWithName:dataDictionnary[@"pools"][i][@"name"]];
             for (int j=0; j<[(dataDictionnary[@"pools"][i]) count]; j++) {
               int k = 0;
               PSDocument* tmp2 = tabDocs[k];
               while ((![(dataDictionnary[@"pools"][i][@"docs"][j]) isEqualToString:tmp2.name]) && (k<[tabDocs count])) {
-                  NSLog(tmp2.name);
                   k++;
                   tmp2 = tabDocs[k];
               }
               if (k<[tabDocs count]) {
-                  [monPool addDoc:tmp2];
+                  [tabPools[i] addDoc:tmp2];
               }
             }
-            [self addPool:monPool];
         }
+        _pools = [[PSSetOfPools alloc]initWithArray:tabPools];
+        
     }
     return self;
-}
-
-
-// base initializer with defaults documents, areas and types
-// define for test purpose, in a final relaease should call the property initializer
-- (id)init
-{
-    NSArray* tabAreas = @[[[PSArea alloc] initWithName:@"IG"],
-                         [[PSArea alloc] initWithName:@"ERII"],
-                         [[PSArea alloc] initWithName:@"Mat"],
-                         [[PSArea alloc] initWithName:@"M&I"],
-                         [[PSArea alloc] initWithName:@"STE"],
-                         [[PSArea alloc] initWithName:@"STIA"],
-                         [[PSArea alloc] initWithName:@"ENR"],
-                         [[PSArea alloc] initWithName:@"MSI"],
-                         [[PSArea alloc] initWithName:@"EGC"],
-                         [[PSArea alloc] initWithName:@"SE"]];
-    NSArray* tabTypes = @[[[PSType alloc] initWithName:@"URL"]];
-    self = [super init];
-    if (self) {
-        _types = [[PSSetOfTypes alloc]initWithArray:tabTypes];
-        _areas = [[PSSetOfAreas alloc]initWithArray:tabAreas];
-        _docs  = [[NSMutableSet alloc] initWithArray:
-                  @[[[PSDocument alloc] initWithName:@"Plaquette IG" type:[self.types typeOfName:@"URL"] andArea:[self.areas areaOfName:@"IG"]],
-                   [[PSDocument alloc] initWithName:@"Syllabus IG" type:[self.types typeOfName:@"URL"] andArea:[self.areas areaOfName:@"IG"]],
-                   [[PSDocument alloc] initWithName:@"Plaquette ERII" type:[self.types typeOfName:@"URL"] andArea:[self.areas areaOfName:@"ERII"]],
-                   [[PSDocument alloc] initWithName:@"Syllabus ERII" type:[self.types typeOfName:@"URL"] andArea:[self.areas areaOfName:@"ERII"]],
-                   [[PSDocument alloc] initWithName:@"Plaquette Mat" type:[self.types typeOfName:@"URL"] andArea:[self.areas areaOfName:@"Mat"]],
-                   [[PSDocument alloc] initWithName:@"Syllabus M&I" type:[self.types typeOfName:@"URL"] andArea:[self.areas areaOfName:@"M&I"]]]];
-        _pools = [NSMutableSet setWithCapacity:10];
-    }
-    return self;
-}
-
-// *************************************************************************************
-
-// add a pool to this library
-- (void) addPool:(PSPool *)pool{
-    [self.pools addObject:pool];
 }
 
 @end

@@ -17,7 +17,7 @@
         self->_pools = [aSetOfPools allObjects];
         self->_docsByPools = [NSMutableArray arrayWithCapacity:[self.pools count]];
         for (int i=0; i<[self.pools count]; i++) {
-            [self.docsByPools insertObject:[NSArray arrayWithArray:[(self.pools)[i] allDocumentsSortedByName]] atIndex:i];
+            [self.docsByPools insertObject:[NSArray arrayWithArray:[(self.pools)[i] getDocsList]] atIndex:i];
         }
     }
     [aSetOfPools addObserver:self];
@@ -28,7 +28,7 @@
 {
     return (self.pools)[aSection];
 }
--(NSMutableSet*) getDocumentsListForSection:(NSInteger)aSection
+-(NSArray*) getDocumentsListForSection:(NSInteger)aSection
 {
     return [(self.pools)[aSection] getDocsList];
 }
