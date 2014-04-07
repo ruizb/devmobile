@@ -22,7 +22,7 @@
     self = [super init];
     if (self) {
         self->_dico = [NSMutableDictionary dictionaryWithCapacity:20];
-        self->_dataModelDelegate = [[CFDefaultModelObserved alloc]init];
+        self->_dataModelDelegate = [[DefaultModelObserved alloc]init];
     }
     return self;
 }
@@ -35,7 +35,7 @@
             [keys insertObject:[(id)anArray[i] name] atIndex:i];
         }
         self->_dico = [NSMutableDictionary dictionaryWithObjects:anArray forKeys:keys];
-        self->_dataModelDelegate = [[CFDefaultModelObserved alloc]init];
+        self->_dataModelDelegate = [[DefaultModelObserved alloc]init];
     }
     return self;
 }
@@ -185,10 +185,10 @@
 // *************************************************************************************
 // Data Model Observed
 
-- (void)addObserver:(id<CFObserver>) observer{
+- (void)addObserver:(id<Observer>) observer{
     [self->_dataModelDelegate addObserver:observer];
 }
-- (void)removeObserver:(id<CFObserver>) observer{
+- (void)removeObserver:(id<Observer>) observer{
     [self->_dataModelDelegate removeObserver:observer];
 }
 - (void)postNotification{

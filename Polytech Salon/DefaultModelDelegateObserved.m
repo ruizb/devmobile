@@ -8,7 +8,7 @@
 
 #import "DefaultModelDelegateObserved.h"
 
-@implementation CFDefaultModelDelegateObserved
+@implementation DefaultModelDelegateObserved
 
 @synthesize delegate=_delegate;
 
@@ -16,15 +16,15 @@
 {
     self = [super init];
     if (self) {
-        _delegate = [[CFDefaultModelObserved alloc] init];
+        _delegate = [[DefaultModelObserved alloc] init];
     }
     return self;
 }
 
-- (void)addObserver:(id<CFObserver>) observer{
+- (void)addObserver:(id<Observer>) observer{
     [self.delegate addObserver:observer];
 }
-- (void)removeObserver:(id<CFObserver>) observer{
+- (void)removeObserver:(id<Observer>) observer{
     [self.delegate removeObserver:observer];
 }
 - (void)postNotification{

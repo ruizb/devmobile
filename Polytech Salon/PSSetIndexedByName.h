@@ -16,10 +16,10 @@
 // if name property of an object belonging to the set is changed, then index is change accordingly
 // as object are observed by the set, you should remove them or clean the set before deleting it in order to avoid memory leak
 // object into the set must conform to PSObjectWithName protocol
-@interface PSSetIndexedByName : NSObject<CFModelObserved>
+@interface PSSetIndexedByName : NSObject<ModelObserved>
 {
     //    @private NSMutableDictionary* dico;
-    @private CFDefaultModelObserved* _dataModelDelegate;
+    @private DefaultModelObserved* _dataModelDelegate;
 }
 
 @property NSMutableDictionary* dico;
@@ -91,8 +91,8 @@
 
 // *************************************************************************************
 
-- (void)addObserver:(id<CFObserver>) observer;
-- (void)removeObserver:(id<CFObserver>) observer;
+- (void)addObserver:(id<Observer>) observer;
+- (void)removeObserver:(id<Observer>) observer;
 - (void)postNotification;
 - (void)postNotificationWithName:(NSString*)aName;
 

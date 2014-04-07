@@ -8,7 +8,7 @@
 
 #import "DefaultModelObserved.h"
 
-@implementation CFDefaultModelObserved
+@implementation DefaultModelObserved
 
 @synthesize observerSet=_observerSet;
 
@@ -20,10 +20,10 @@
     }
     return self;
 }
-- (void)addObserver:(id<CFObserver>) observer{
+- (void)addObserver:(id<Observer>) observer{
     [self.observerSet addObject:observer];
 }
-- (void)removeObserver:(id<CFObserver>) observer{
+- (void)removeObserver:(id<Observer>) observer{
     [self.observerSet removeObject:observer];
 }
 - (void)postNotification{

@@ -10,7 +10,7 @@
 #import "PSLibrary.h"
 #import "PSDataDocuments.h"
 
-@interface PSPoolTableViewController : UITableViewController
+@interface PSDocsTableViewController : UITableViewController
 
 @property (nonatomic,strong,readonly) PSLibrary* library;
 @property (nonatomic,strong,readonly) PSDataDocuments* dataDocuments;

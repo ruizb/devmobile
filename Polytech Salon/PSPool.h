@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PSDocument.h"
 
-@interface PSPool : NSObject
+@interface PSPool : NSObject<PSObjectWithName>
 
 @property (nonatomic,copy) NSString* name;
 @property (nonatomic,readonly,strong) NSMutableSet* docsList;
@@ -18,5 +18,6 @@
 
 - (void) addDoc:(PSDocument*)doc;
 - (void) delDoc:(PSDocument*)doc;
+- (NSMutableSet*) getDocsList;
 
 @end

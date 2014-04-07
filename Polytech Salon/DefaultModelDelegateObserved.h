@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "DefaultModelObserved.h"
 
-@interface CFDefaultModelDelegateObserved : NSObject <CFModelObserved>
+@interface DefaultModelDelegateObserved : NSObject <ModelObserved>
 
-@property (nonatomic,strong) CFDefaultModelObserved* delegate;
+@property (nonatomic,strong) DefaultModelObserved* delegate;
 
 - (id) init;
-- (void)addObserver:(id<CFObserver>) observer;
-- (void)removeObserver:(id<CFObserver>) observer;
+- (void)addObserver:(id<Observer>) observer;
+- (void)removeObserver:(id<Observer>) observer;
 - (void)postNotification;
 - (void)postNotificationWithName:(NSString*)aName;
 

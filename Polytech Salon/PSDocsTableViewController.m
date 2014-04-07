@@ -6,15 +6,15 @@
 //  Copyright (c) 2014 Fiorio Christophe. All rights reserved.
 //
 
-#import "PSPoolTableViewController.h"
-#import "PSPoolCell.h"
+#import "PSDocsTableViewController.h"
+#import "PSDocCell.h"
 #import "PSAppDelegate.h"
 
-@interface PSPoolTableViewController ()
+@interface PSDocsTableViewController ()
 
 @end
 
-@implementation PSPoolTableViewController
+@implementation PSDocsTableViewController
 
 @synthesize library=_library;
 
@@ -65,8 +65,8 @@ static NSArray* areaKeys=nil;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"PSPoolCell";
-    PSPoolCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"PSDocCell";
+    PSDocCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Configure the cell...
     cell.nameLabel.text = [self.dataDocuments getDocumentNameForSection:indexPath.section andForRow:indexPath.row];
     cell.typeLabel.text = [self.dataDocuments getTypeNameForSection:indexPath.section andForRow:indexPath.row];

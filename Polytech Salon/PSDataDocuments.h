@@ -13,7 +13,7 @@
 #import "PSSetOfAreas.h"
 #import "Observer.h"
 
-@interface PSDataDocuments : NSObject<CFObserver>
+@interface PSDataDocuments : NSObject<Observer>
 
 //@property (nonatomic,weak) PSArea* areasSet;
 

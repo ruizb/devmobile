@@ -27,5 +27,8 @@
 - (void) delDoc:(PSDocument *)doc{
     [self.docsList removeObject:doc];
 }
+- (NSMutableSet*) getDocsList {
+    return self.docsList;
+}
 
 @end

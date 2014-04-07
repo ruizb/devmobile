@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PSPoolCell : UITableViewCell
+@interface PSDocCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typeLabel;

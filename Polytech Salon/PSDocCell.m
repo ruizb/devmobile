@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Fiorio Christophe. All rights reserved.
 //
 
-#import "PSPoolCell.h"
+#import "PSDocCell.h"
 
-@implementation PSPoolCell
+@implementation PSDocCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

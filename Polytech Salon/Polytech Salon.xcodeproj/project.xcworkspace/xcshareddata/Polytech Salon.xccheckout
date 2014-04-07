@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>61A8A5C1-5578-4323-9817-F94EE2DCDA60</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Polytech Salon</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DD1CE9E1-E0CB-4BAA-B62A-8A0C6B79145C</key>
+		<string>http://github.com/ruizb/devmobile</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Polytech Salon/Polytech Salon.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DD1CE9E1-E0CB-4BAA-B62A-8A0C6B79145C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>http://github.com/ruizb/devmobile</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DD1CE9E1-E0CB-4BAA-B62A-8A0C6B79145C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD1CE9E1-E0CB-4BAA-B62A-8A0C6B79145C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>devmobile</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol CFObserver <NSObject>
+@protocol Observer <NSObject>
 - (void)changeIn:(id)source;
 @optional
 - (void)changeIn:(id)source withName:(NSString*)aName;

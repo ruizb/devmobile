@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "Observer.h"
 
-@protocol CFModelObserved <NSObject>
-- (void)addObserver:(id<CFObserver>) observer;
-- (void)removeObserver:(id<CFObserver>) observer;
+@protocol ModelObserved <NSObject>
+- (void)addObserver:(id<Observer>) observer;
+- (void)removeObserver:(id<Observer>) observer;
 - (void)postNotification;
 - (void)postNotificationWithName:(NSString*)aName;
 @optional
