@@ -57,6 +57,38 @@
 	<array>
 		<dict>
 			<key>name</key>
+			<string>Document ENR</string>
+			<key>area</key>
+			<string>ENR</string>
+			<key>type</key>
+			<string>URL</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Plaquette MSI</string>
+			<key>area</key>
+			<string>MSI</string>
+			<key>type</key>
+			<string>URL</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Plaquette STIA</string>
+			<key>area</key>
+			<string>STIA</string>
+			<key>type</key>
+			<string>URL</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Document STE</string>
+			<key>area</key>
+			<string>STE</string>
+			<key>type</key>
+			<string>Pdf</string>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Plaquette SE</string>
 			<key>area</key>
 			<string>SE</string>

@@ -33,4 +33,6 @@
 -(NSInteger) numberOfSections;
 -(NSInteger) numberOfRowsForSection:(NSInteger)aSection;
 
+-(NSArray*) getDocumentsForPool;
+
 @end

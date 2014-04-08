@@ -14,4 +14,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (nonatomic,readonly,strong) PSLibrary* library;
 
+-(void) updateLibrary:(PSLibrary*)newLibrary;
+
 @end

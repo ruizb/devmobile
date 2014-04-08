@@ -24,6 +24,11 @@
 - (void) addDoc:(PSDocument *)doc{
     [self.docsList addObject:doc];
 }
+- (void) addDocs:(NSArray*)docs{
+    for(int i=0; i<[docs count]; i++) {
+        [self addDoc:docs[i]];
+    }
+}
 - (void) delDoc:(PSDocument *)doc{
     [self.docsList removeObject:doc];
 }

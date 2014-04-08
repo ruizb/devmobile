@@ -128,6 +128,7 @@ static NSArray* areaKeys=nil;
 }
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    self->_dataPools = [[PSDataPools alloc] initWithPools:[self.library pools]];
     [self.tableView reloadData];
 }
 

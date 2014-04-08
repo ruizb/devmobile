@@ -47,6 +47,8 @@
 - (NSArray*) allDocumentsSortedByName;
 // get all checked documents
 - (NSArray*) allDocumentsChecked;
+// get all checked documents for new pool
+- (NSArray*) allDocumentsCheckedPool;
 
 // number of documents of this area
 -(NSInteger) numberOfDocuments;

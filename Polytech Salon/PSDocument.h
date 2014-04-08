@@ -29,6 +29,8 @@
 @property (nonatomic,weak) PSArea* area;
 // Check if document was chosen or not
 @property (nonatomic) BOOL checked;
+// Check if document was chosen for new pool or not
+@property (nonatomic) BOOL checkedPool;
 
 // initialize document with a name and a type
 // area is set to nil

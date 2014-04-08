@@ -12,6 +12,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="niS-hB-cui">
+                            <rect key="frame" x="0.0" y="173" width="768" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="9FM-Rz-LEI"/>
+                                <barButtonItem title="Créer un pool" style="plain" id="m18-0F-UCN">
+                                    <connections>
+                                        <segue destination="GzE-1j-7Ac" kind="push" id="djc-2y-WDf"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="Xta-Tz-HbO"/>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PSPoolCell" editingAccessoryType="disclosureIndicator" id="ZzZ-kX-CkH" customClass="PSPoolCell">
                                 <rect key="frame" x="0.0" y="119" width="768" height="44"/>
@@ -107,6 +120,11 @@
                                 <segue destination="LW6-TL-6lc" kind="unwind" unwindAction="unwindToList:" id="iXH-LK-paw"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Envoyer" id="eOl-HO-uPD" userLabel="Bar Button Item - Compose">
+                            <connections>
+                                <action selector="showEmail:" destination="pk1-rs-gR5" id="yxz-ii-PGu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rli-Zh-gd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -177,6 +195,81 @@
             </objects>
             <point key="canvasLocation" x="-355" y="-1888"/>
         </scene>
+        <!--Add Table View Controller - Créer un pool-->
+        <scene sceneID="U2H-QJ-Ein">
+            <objects>
+                <tableViewController id="GzE-1j-7Ac" customClass="PSAddTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Xgu-M7-RgD">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <textField key="tableFooterView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nom du nouveau pool" textAlignment="center" minimumFontSize="40" id="WD7-D7-zWy">
+                            <rect key="frame" x="0.0" y="173" width="768" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PSAddCell" id="WLP-E1-duw" customClass="PSAddCell">
+                                <rect key="frame" x="0.0" y="119" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WLP-E1-duw" id="J1S-Qj-JgP">
+                                    <rect key="frame" x="0.0" y="0.0" width="729" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Area" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uya-zU-tYC">
+                                            <rect key="frame" x="578" y="11" width="130" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4KM-vh-4bX">
+                                            <rect key="frame" x="45" y="11" width="387" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tk8-E5-T6d">
+                                            <rect key="frame" x="440" y="11" width="130" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="areaLabel" destination="uya-zU-tYC" id="Eki-Se-vUb"/>
+                                    <outlet property="nameLabel" destination="4KM-vh-4bX" id="3VJ-Ky-feg"/>
+                                    <outlet property="typeLabel" destination="tk8-E5-T6d" id="6Vt-6s-GAv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GzE-1j-7Ac" id="ThV-DP-yR0"/>
+                            <outlet property="delegate" destination="GzE-1j-7Ac" id="HJC-ZK-seJ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Créer un pool" id="iVR-fL-gI3">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Annuler" id="BvA-qh-VmA">
+                            <connections>
+                                <segue destination="LW6-TL-6lc" kind="unwind" identifier="UnwindSegueIdentifier" unwindAction="unwindToList:" id="f7Y-P0-40z"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MtQ-8U-hAy">
+                            <connections>
+                                <action selector="addPool:" destination="GzE-1j-7Ac" id="qQE-4r-Xac"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="poolName" destination="WD7-D7-zWy" id="gDJ-JD-WUN"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pft-1h-liQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1832" y="-1888"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sx3-Io-9ub">
             <objects>
@@ -231,6 +324,24 @@
             </objects>
             <point key="canvasLocation" x="-1551" y="-3168"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1GA-6M-TYM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eHb-X8-ZUR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="VD5-Ty-LcD">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GzE-1j-7Ac" kind="relationship" relationship="rootViewController" id="J78-dX-cGR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kew-nP-Y4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="-1888"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="lightContent"/>
@@ -238,7 +349,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Y9N-gt-cBq"/>
-        <segue reference="Y5x-lt-mZu"/>
+        <segue reference="J78-dX-cGR"/>
+        <segue reference="v5i-xn-EFy"/>
+        <segue reference="IVU-ZO-Flm"/>
     </inferredMetricsTieBreakers>
 </document>

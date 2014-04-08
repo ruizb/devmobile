@@ -97,9 +97,22 @@
     NSMutableArray* createdTab = [[NSMutableArray alloc] init];
     
     for(int i=0; i<[tabDocs count]; i++) {
-        
         PSDocument* doc = tabDocs[i];
         if (doc.checked)
+            [createdTab addObject:doc];
+    }
+    
+    return createdTab;
+}
+
+// get checked documents for new pool
+- (NSArray*) allDocumentsCheckedPool{
+    NSMutableArray* tabDocs = [NSMutableArray arrayWithArray:[self.docsList allObjects]];
+    NSMutableArray* createdTab = [[NSMutableArray alloc] init];
+    
+    for(int i=0; i<[tabDocs count]; i++) {
+        PSDocument* doc = tabDocs[i];
+        if (doc.checkedPool)
             [createdTab addObject:doc];
     }
     

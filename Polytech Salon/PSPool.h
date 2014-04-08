@@ -17,6 +17,7 @@
 - (id) initWithName:(NSString*)name;
 
 - (void) addDoc:(PSDocument*)doc;
+- (void) addDocs:(NSArray*)docs;
 - (void) delDoc:(PSDocument*)doc;
 - (NSArray*) getDocsList;
 

@@ -34,6 +34,7 @@
         _area = nil;
         _type = aType;
         _checked = FALSE;
+        _checkedPool = FALSE;
         if(anArea!=nil) self.area=anArea;
     }
     return self;

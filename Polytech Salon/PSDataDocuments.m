@@ -51,6 +51,16 @@
     return [(self.areas)[aSection] numberOfDocuments];
 }
 
+-(NSArray*) getDocumentsForPool{
+    NSMutableArray* checkedDocuments = [[NSMutableArray alloc] init];
+    
+    for (int i=0; i<[self.areas count]; i++) {
+        [checkedDocuments addObjectsFromArray:[self.areas[i] allDocumentsCheckedPool]];
+    }
+    
+    return [NSArray arrayWithArray:checkedDocuments];
+}
+
 // *************************************************************************************
 // Data Model Observer
 

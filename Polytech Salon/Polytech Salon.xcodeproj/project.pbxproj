@@ -43,7 +43,6 @@
 		0760E27B18D0B9A0006133F3 /* PSSetIndexedByName.m in Sources */ = {isa = PBXBuildFile; fileRef = 0760E27918D0B9A0006133F3 /* PSSetIndexedByName.m */; };
 		0760E27E18D1EF42006133F3 /* NSMutableSet+PSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0760E27D18D1EF42006133F3 /* NSMutableSet+PSSet.m */; };
 		0760E27F18D1EF42006133F3 /* NSMutableSet+PSSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0760E27D18D1EF42006133F3 /* NSMutableSet+PSSet.m */; };
-		079F6B1C18D59B0700943066 /* Library property backup in Resources */ = {isa = PBXBuildFile; fileRef = 079F6B1B18D59B0700943066 /* Library property backup */; };
 		07B5554818D369D900EBA151 /* PSDataDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B5554718D369D900EBA151 /* PSDataDocuments.m */; };
 		07B5554918D369D900EBA151 /* PSDataDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B5554718D369D900EBA151 /* PSDataDocuments.m */; };
 		07B5554B18D46C3600EBA151 /* Library property.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B5554A18D46C3600EBA151 /* Library property.plist */; };
@@ -55,6 +54,8 @@
 		849F07CD18F31E9500BE3F18 /* PSSetOfPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07CC18F31E9500BE3F18 /* PSSetOfPools.m */; };
 		849F07D018F328BC00BE3F18 /* PSPoolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */; };
 		849F07D318F329E200BE3F18 /* PSPoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07D218F329E200BE3F18 /* PSPoolCell.m */; };
+		84E5022D18F46AEA004154A6 /* PSAddTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E5022C18F46AEA004154A6 /* PSAddTableViewController.m */; };
+		84E5023018F46B02004154A6 /* PSAddCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E5022F18F46B02004154A6 /* PSAddCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +116,6 @@
 		0760E27918D0B9A0006133F3 /* PSSetIndexedByName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSetIndexedByName.m; sourceTree = "<group>"; };
 		0760E27C18D1EF42006133F3 /* NSMutableSet+PSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableSet+PSSet.h"; sourceTree = "<group>"; };
 		0760E27D18D1EF42006133F3 /* NSMutableSet+PSSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableSet+PSSet.m"; sourceTree = "<group>"; };
-		079F6B1B18D59B0700943066 /* Library property backup */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Library property backup"; sourceTree = SOURCE_ROOT; };
 		07B5554518D2FE0900EBA151 /* PSObjectWithName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSObjectWithName.h; sourceTree = "<group>"; };
 		07B5554618D369D800EBA151 /* PSDataDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDataDocuments.h; sourceTree = "<group>"; };
 		07B5554718D369D900EBA151 /* PSDataDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDataDocuments.m; sourceTree = "<group>"; };
@@ -134,6 +134,10 @@
 		849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPoolTableViewController.m; sourceTree = "<group>"; };
 		849F07D118F329E200BE3F18 /* PSPoolCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPoolCell.h; sourceTree = "<group>"; };
 		849F07D218F329E200BE3F18 /* PSPoolCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPoolCell.m; sourceTree = "<group>"; };
+		84E5022B18F46AEA004154A6 /* PSAddTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAddTableViewController.h; sourceTree = "<group>"; };
+		84E5022C18F46AEA004154A6 /* PSAddTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAddTableViewController.m; sourceTree = "<group>"; };
+		84E5022E18F46B02004154A6 /* PSAddCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSAddCell.h; sourceTree = "<group>"; };
+		84E5022F18F46B02004154A6 /* PSAddCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSAddCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,18 +171,7 @@
 				0760E25A18D039B5006133F3 /* Business classes */,
 				0760E25B18D03A07006133F3 /* Model classes */,
 				0731D45418CCA72700373AE1 /* Polytech_Salon.storyboard */,
-				0760E1DF18CDF0E5006133F3 /* PSDocsTableViewController.h */,
-				0760E1E018CDF0E5006133F3 /* PSDocsTableViewController.m */,
-				0760E1E218CDF1A4006133F3 /* PSDocCell.h */,
-				0760E1E318CDF1A4006133F3 /* PSDocCell.m */,
-				849F07CE18F328BC00BE3F18 /* PSPoolTableViewController.h */,
-				849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */,
-				849F07D118F329E200BE3F18 /* PSPoolCell.h */,
-				849F07D218F329E200BE3F18 /* PSPoolCell.m */,
-				8495E6D918F36E1E007218F1 /* PSSendTableViewController.h */,
-				8495E6DA18F36E1E007218F1 /* PSSendTableViewController.m */,
-				8495E6DF18F37EAF007218F1 /* PSSendCell.h */,
-				8495E6E018F37EAF007218F1 /* PSSendCell.m */,
+				84E5022A18F46A75004154A6 /* TableViewControllers */,
 				0731D42918CCA32300373AE1 /* Polytech Salon */,
 				0731D44218CCA32300373AE1 /* Polytech SalonTests */,
 				0731D42218CCA32300373AE1 /* Frameworks */,
@@ -221,7 +214,6 @@
 			isa = PBXGroup;
 			children = (
 				07B5554A18D46C3600EBA151 /* Library property.plist */,
-				079F6B1B18D59B0700943066 /* Library property backup */,
 				0731D42B18CCA32300373AE1 /* Polytech Salon-Info.plist */,
 				0731D42C18CCA32300373AE1 /* InfoPlist.strings */,
 				0731D42F18CCA32300373AE1 /* main.m */,
@@ -300,6 +292,29 @@
 				0760E26218D03A95006133F3 /* Observer.h */,
 			);
 			name = "Observer design pattern";
+			sourceTree = "<group>";
+		};
+		84E5022A18F46A75004154A6 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				84E5022E18F46B02004154A6 /* PSAddCell.h */,
+				84E5022F18F46B02004154A6 /* PSAddCell.m */,
+				0760E1E218CDF1A4006133F3 /* PSDocCell.h */,
+				0760E1E318CDF1A4006133F3 /* PSDocCell.m */,
+				849F07D118F329E200BE3F18 /* PSPoolCell.h */,
+				849F07D218F329E200BE3F18 /* PSPoolCell.m */,
+				8495E6DF18F37EAF007218F1 /* PSSendCell.h */,
+				8495E6E018F37EAF007218F1 /* PSSendCell.m */,
+				84E5022B18F46AEA004154A6 /* PSAddTableViewController.h */,
+				84E5022C18F46AEA004154A6 /* PSAddTableViewController.m */,
+				0760E1DF18CDF0E5006133F3 /* PSDocsTableViewController.h */,
+				0760E1E018CDF0E5006133F3 /* PSDocsTableViewController.m */,
+				849F07CE18F328BC00BE3F18 /* PSPoolTableViewController.h */,
+				849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */,
+				8495E6D918F36E1E007218F1 /* PSSendTableViewController.h */,
+				8495E6DA18F36E1E007218F1 /* PSSendTableViewController.m */,
+			);
+			name = TableViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0731D42E18CCA32300373AE1 /* InfoPlist.strings in Resources */,
-				079F6B1C18D59B0700943066 /* Library property backup in Resources */,
 				0731D45518CCA72700373AE1 /* Polytech_Salon.storyboard in Resources */,
 				07B5554B18D46C3600EBA151 /* Library property.plist in Resources */,
 				0731D43618CCA32300373AE1 /* Images.xcassets in Resources */,
@@ -407,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E5022D18F46AEA004154A6 /* PSAddTableViewController.m in Sources */,
 				0731D43018CCA32300373AE1 /* main.m in Sources */,
 				0731D45D18CCBB4200373AE1 /* PSDocument.m in Sources */,
 				8495E6DE18F37C44007218F1 /* PSDataChecked.m in Sources */,
@@ -423,6 +438,7 @@
 				0760E27618D04A1B006133F3 /* PSSetOfAreas.m in Sources */,
 				849F07CA18F31ABD00BE3F18 /* PSDataPools.m in Sources */,
 				849F07D318F329E200BE3F18 /* PSPoolCell.m in Sources */,
+				84E5023018F46B02004154A6 /* PSAddCell.m in Sources */,
 				0731D46918CD032A00373AE1 /* PSLibrary.m in Sources */,
 				07B5554818D369D900EBA151 /* PSDataDocuments.m in Sources */,
 				0760E27218D04144006133F3 /* PSSetOfTypes.m in Sources */,

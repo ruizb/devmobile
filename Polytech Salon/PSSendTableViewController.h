@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 #import "PSLibrary.h"
 #import "PSDataChecked.h"
 
-@interface PSSendTableViewController : UITableViewController
+@interface PSSendTableViewController : UITableViewController <MFMailComposeViewControllerDelegate>
 
 @property (nonatomic,strong,readonly) PSLibrary* library;
 @property (nonatomic,strong,readonly) PSDataChecked* dataDocuments;
+- (IBAction)showEmail:(id)sender;
 
 @end

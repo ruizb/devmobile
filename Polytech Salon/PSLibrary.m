@@ -60,8 +60,12 @@
     for(PSDocument* doc in self.docs){
         [pdictDocs addObject:[NSDictionary dictionaryWithObjects:@[doc.name,[doc.area name],[doc.type name]] forKeys:@[@"name",@"area",@"type"]]];
     }
-    NSDictionary* pdict = [NSDictionary dictionaryWithObjects:@[[self.types allNames],[self.areas allNames],pdictDocs]
-                                                      forKeys:@[@"types",@"areas",@"documents"]];
+    NSMutableArray* pdicPools = [NSMutableArray arrayWithCapacity:[self.pools count]];
+    for(PSPool* pool in [self.pools allObjects]) {
+        [pdicPools addObject:[NSDictionary dictionaryWithObjects:@[pool.name,[pool getDocsList]] forKeys:@[@"name",@"docs"]]];
+    }
+    NSDictionary* pdict = [NSDictionary dictionaryWithObjects:@[[self.types allNames],[self.areas allNames],pdictDocs,pdicPools]
+                                                      forKeys:@[@"types",@"areas",@"documents",@"pools"]];
     return pdict;
 }
 
