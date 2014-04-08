@@ -14,5 +14,6 @@
 
 @property (nonatomic,strong,readonly) PSLibrary* library;
 @property (nonatomic,strong,readonly) PSDataDocuments* dataDocuments;
+@property (nonatomic) NSArray* documentsList;
 
 @end

@@ -1,5 +1,5 @@
 //
-//  PSPoolTableViewController.h
+//  PSSendTableViewController.h
 //  Polytech Salon
 //
 //  Created by Lacroute Henri on 07/04/14.
@@ -8,12 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "PSLibrary.h"
-#import "PSDataPools.h"
-#import "PSDocsTableViewController.h"
+#import "PSDataChecked.h"
 
-@interface PSPoolTableViewController : UITableViewController
+@interface PSSendTableViewController : UITableViewController
 
 @property (nonatomic,strong,readonly) PSLibrary* library;
-@property (nonatomic,strong,readonly) PSDataPools* dataPools;
+@property (nonatomic,strong,readonly) PSDataChecked* dataDocuments;
 
 @end

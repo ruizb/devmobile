@@ -9,6 +9,7 @@
 #import "PSDocsTableViewController.h"
 #import "PSDocCell.h"
 #import "PSAppDelegate.h"
+#import "PSDocument.h"
 
 @interface PSDocsTableViewController ()
 
@@ -54,13 +55,13 @@ static NSArray* areaKeys=nil;
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return [self.dataDocuments numberOfSections];
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.dataDocuments numberOfRowsForSection:section];
+    return [self.documentsList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -68,21 +69,25 @@ static NSArray* areaKeys=nil;
     static NSString *CellIdentifier = @"PSDocCell";
     PSDocCell* cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     // Configure the cell...
-    cell.nameLabel.text = [self.dataDocuments getDocumentNameForSection:indexPath.section andForRow:indexPath.row];
-    cell.typeLabel.text = [self.dataDocuments getTypeNameForSection:indexPath.section andForRow:indexPath.row];
-    cell.areaLabel.text = [self.dataDocuments getAreaNameForSection:indexPath.section];
+    PSDocument* doc = [self.documentsList objectAtIndex:indexPath.row];
+    cell.nameLabel.text = doc.name;
+    cell.typeLabel.text = doc.type.name;
+    cell.areaLabel.text = doc.area.name;
+    if(doc.checked)
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    
     return cell;
 }
 
-/*
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
-
 
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,9 +117,18 @@ static NSArray* areaKeys=nil;
 }
 */
 
-/*
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    PSDocument* doc = [self.documentsList objectAtIndex:indexPath.row];
+    doc.checked = !doc.checked;
+    [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
+
 #pragma mark - Navigation
 
+/*
+ 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -123,5 +137,9 @@ static NSArray* areaKeys=nil;
 }
 
  */
+
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue {
+    [self.tableView reloadData];
+}
 
 @end

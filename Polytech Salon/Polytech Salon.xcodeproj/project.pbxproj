@@ -48,6 +48,9 @@
 		07B5554918D369D900EBA151 /* PSDataDocuments.m in Sources */ = {isa = PBXBuildFile; fileRef = 07B5554718D369D900EBA151 /* PSDataDocuments.m */; };
 		07B5554B18D46C3600EBA151 /* Library property.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B5554A18D46C3600EBA151 /* Library property.plist */; };
 		07B5554C18D46C3600EBA151 /* Library property.plist in Resources */ = {isa = PBXBuildFile; fileRef = 07B5554A18D46C3600EBA151 /* Library property.plist */; };
+		8495E6DB18F36E1E007218F1 /* PSSendTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E6DA18F36E1E007218F1 /* PSSendTableViewController.m */; };
+		8495E6DE18F37C44007218F1 /* PSDataChecked.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E6DD18F37C44007218F1 /* PSDataChecked.m */; };
+		8495E6E118F37EAF007218F1 /* PSSendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8495E6E018F37EAF007218F1 /* PSSendCell.m */; };
 		849F07CA18F31ABD00BE3F18 /* PSDataPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07C918F31ABD00BE3F18 /* PSDataPools.m */; };
 		849F07CD18F31E9500BE3F18 /* PSSetOfPools.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07CC18F31E9500BE3F18 /* PSSetOfPools.m */; };
 		849F07D018F328BC00BE3F18 /* PSPoolTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */; };
@@ -117,6 +120,12 @@
 		07B5554618D369D800EBA151 /* PSDataDocuments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDataDocuments.h; sourceTree = "<group>"; };
 		07B5554718D369D900EBA151 /* PSDataDocuments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDataDocuments.m; sourceTree = "<group>"; };
 		07B5554A18D46C3600EBA151 /* Library property.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Library property.plist"; path = "../Library property.plist"; sourceTree = "<group>"; };
+		8495E6D918F36E1E007218F1 /* PSSendTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSendTableViewController.h; sourceTree = "<group>"; };
+		8495E6DA18F36E1E007218F1 /* PSSendTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSendTableViewController.m; sourceTree = "<group>"; };
+		8495E6DC18F37C44007218F1 /* PSDataChecked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDataChecked.h; sourceTree = "<group>"; };
+		8495E6DD18F37C44007218F1 /* PSDataChecked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDataChecked.m; sourceTree = "<group>"; };
+		8495E6DF18F37EAF007218F1 /* PSSendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSendCell.h; sourceTree = "<group>"; };
+		8495E6E018F37EAF007218F1 /* PSSendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSSendCell.m; sourceTree = "<group>"; };
 		849F07C818F31ABD00BE3F18 /* PSDataPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSDataPools.h; sourceTree = "<group>"; };
 		849F07C918F31ABD00BE3F18 /* PSDataPools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSDataPools.m; sourceTree = "<group>"; };
 		849F07CB18F31E9500BE3F18 /* PSSetOfPools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSSetOfPools.h; sourceTree = "<group>"; };
@@ -166,6 +175,10 @@
 				849F07CF18F328BC00BE3F18 /* PSPoolTableViewController.m */,
 				849F07D118F329E200BE3F18 /* PSPoolCell.h */,
 				849F07D218F329E200BE3F18 /* PSPoolCell.m */,
+				8495E6D918F36E1E007218F1 /* PSSendTableViewController.h */,
+				8495E6DA18F36E1E007218F1 /* PSSendTableViewController.m */,
+				8495E6DF18F37EAF007218F1 /* PSSendCell.h */,
+				8495E6E018F37EAF007218F1 /* PSSendCell.m */,
 				0731D42918CCA32300373AE1 /* Polytech Salon */,
 				0731D44218CCA32300373AE1 /* Polytech SalonTests */,
 				0731D42218CCA32300373AE1 /* Frameworks */,
@@ -270,6 +283,8 @@
 				07B5554718D369D900EBA151 /* PSDataDocuments.m */,
 				849F07C818F31ABD00BE3F18 /* PSDataPools.h */,
 				849F07C918F31ABD00BE3F18 /* PSDataPools.m */,
+				8495E6DC18F37C44007218F1 /* PSDataChecked.h */,
+				8495E6DD18F37C44007218F1 /* PSDataChecked.m */,
 			);
 			name = "Model classes";
 			sourceTree = "<group>";
@@ -394,14 +409,17 @@
 			files = (
 				0731D43018CCA32300373AE1 /* main.m in Sources */,
 				0731D45D18CCBB4200373AE1 /* PSDocument.m in Sources */,
+				8495E6DE18F37C44007218F1 /* PSDataChecked.m in Sources */,
 				0760E26318D03A95006133F3 /* DefaultModelDelegateObserved.m in Sources */,
 				0731D46518CCFF0E00373AE1 /* PSPool.m in Sources */,
 				849F07CD18F31E9500BE3F18 /* PSSetOfPools.m in Sources */,
 				0760E27A18D0B9A0006133F3 /* PSSetIndexedByName.m in Sources */,
 				0760E26418D03A95006133F3 /* DefaultModelObserved.m in Sources */,
+				8495E6E118F37EAF007218F1 /* PSSendCell.m in Sources */,
 				0731D45918CCA7B900373AE1 /* PSType.m in Sources */,
 				0760E1E118CDF0E5006133F3 /* PSDocsTableViewController.m in Sources */,
 				0760E1E418CDF1A4006133F3 /* PSDocCell.m in Sources */,
+				8495E6DB18F36E1E007218F1 /* PSSendTableViewController.m in Sources */,
 				0760E27618D04A1B006133F3 /* PSSetOfAreas.m in Sources */,
 				849F07CA18F31ABD00BE3F18 /* PSDataPools.m in Sources */,
 				849F07D318F329E200BE3F18 /* PSPoolCell.m in Sources */,

@@ -33,6 +33,7 @@
         _name = aName;
         _area = nil;
         _type = aType;
+        _checked = FALSE;
         if(anArea!=nil) self.area=anArea;
     }
     return self;
@@ -57,6 +58,10 @@
     }
     self->_area=area;
     [area addDocument:self];
+}
+
+- (NSString*) getName {
+    return self->_name;
 }
 
 

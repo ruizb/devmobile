@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         self->_pools = [aSetOfPools allObjects];
-        self->_docsByPools = [NSMutableArray arrayWithCapacity:[self.pools count]];
+        self->_docsByPools = [NSMutableArray arrayWithCapacity:50];
         for (int i=0; i<[self.pools count]; i++) {
             [self.docsByPools insertObject:[NSArray arrayWithArray:[(self.pools)[i] getDocsList]] atIndex:i];
         }

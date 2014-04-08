@@ -27,6 +27,8 @@
 // area of document - relationship between document is managed:
 // when a document has an area, this area should have the document in its set
 @property (nonatomic,weak) PSArea* area;
+// Check if document was chosen or not
+@property (nonatomic) BOOL checked;
 
 // initialize document with a name and a type
 // area is set to nil

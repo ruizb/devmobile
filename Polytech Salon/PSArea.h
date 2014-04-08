@@ -29,7 +29,7 @@
 // initializer with a set of document: an area with a name and a set of document that is of this are. This initializer check that each document has the right are
 - (id) initWithName:(NSString*)name andDocsSet:(NSSet*) list;
 // same as the precedent but with an array instead a set
-- (id)initWithName:(NSString *)aName andDocsArray:(NSArray *)list;
+- (id) initWithName:(NSString *)aName andDocsArray:(NSArray *)list;
 
 
 // *************************************************************************************
@@ -45,8 +45,12 @@
 - (NSArray*) allDocuments;
 // get a sorted by document name of all documents of this area
 - (NSArray*) allDocumentsSortedByName;
+// get all checked documents
+- (NSArray*) allDocumentsChecked;
 
 // number of documents of this area
 -(NSInteger) numberOfDocuments;
+// number of checked documents of this area
+-(NSInteger) numberOfCheckedDocuments;
 
 @end

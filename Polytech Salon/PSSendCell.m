@@ -1,20 +1,20 @@
 //
-//  PSPoolCell.m
+//  PSSendCell.m
 //  Polytech Salon
 //
-//  Created by Fiorio Christophe on 10/03/2014.
-//  Copyright (c) 2014 Fiorio Christophe. All rights reserved.
+//  Created by Lacroute Henri on 07/04/14.
+//  Copyright (c) 2014 BobyCompany. All rights reserved.
 //
 
-#import "PSDocCell.h"
+#import "PSSendCell.h"
 
-@implementation PSDocCell
+@implementation PSSendCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Init here
+        // Initialization code
     }
     return self;
 }

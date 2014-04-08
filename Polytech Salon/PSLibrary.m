@@ -136,16 +136,16 @@
         NSMutableArray* tabPools = [NSMutableArray arrayWithCapacity:[(dataDictionnary[@"pools"]) count]];
         for (int i=0; i<[(dataDictionnary[@"pools"]) count]; i++) {
             tabPools[i] = [[PSPool alloc] initWithName:dataDictionnary[@"pools"][i][@"name"]];
-            for (int j=0; j<[(dataDictionnary[@"pools"][i]) count]; j++) {
-              int k = 0;
-              PSDocument* tmp2 = tabDocs[k];
-              while ((![(dataDictionnary[@"pools"][i][@"docs"][j]) isEqualToString:tmp2.name]) && (k<[tabDocs count])) {
-                  k++;
-                  tmp2 = tabDocs[k];
-              }
-              if (k<[tabDocs count]) {
-                  [tabPools[i] addDoc:tmp2];
-              }
+            for (int j=0; j<[(dataDictionnary[@"pools"][i][@"docs"]) count]; j++) {
+                int k = 0;
+                PSDocument* tmp2 = tabDocs[k];
+                while ((![(dataDictionnary[@"pools"][i][@"docs"][j]) isEqualToString:tmp2.name]) && (k<[tabDocs count])) {
+                    k++;
+                    tmp2 = tabDocs[k];
+                }
+                if (k<[tabDocs count]) {
+                    [tabPools[i] addDoc:tmp2];
+                }
             }
         }
         _pools = [[PSSetOfPools alloc]initWithArray:tabPools];

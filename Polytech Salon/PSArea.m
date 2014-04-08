@@ -91,9 +91,29 @@
     return [self.docsList sortedArrayByPropertyName:@"name"];
 }
 
+// get checked documents
+- (NSArray*) allDocumentsChecked{
+    NSMutableArray* tabDocs = [NSMutableArray arrayWithArray:[self.docsList allObjects]];
+    NSMutableArray* createdTab = [[NSMutableArray alloc] init];
+    
+    for(int i=0; i<[tabDocs count]; i++) {
+        
+        PSDocument* doc = tabDocs[i];
+        if (doc.checked)
+            [createdTab addObject:doc];
+    }
+    
+    return createdTab;
+}
+
 // number of documents of this area
 -(NSInteger) numberOfDocuments{
     return [self.docsList count];
+}
+
+// number of checked documents of this area
+-(NSInteger) numberOfCheckedDocuments {
+    return [[self allDocumentsChecked] count];
 }
 
 
